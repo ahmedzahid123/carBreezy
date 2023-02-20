@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"  >
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+       const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+
+
+
+        function selectcar()
+        {
+            if (document.getElementById('services').value=='buy a car')
+            {
+                document.getElementById('cars').style.display="block";
+
+            }
+            else
+            {
+                document.getElementById('cars').style.display="none";
+            }
+            
+
+        }
+        </script>
+        <section class="contact" id="contact">
+
+            <h1 class="heading"><span>contact</span> us</h1>
+        
+            <div class="row">
+        
+             
+        
+                <form action="">
+                    <h3>Reach us</h3>
+                    <input type="text" placeholder="your name" class="box"  required>
+                    <input type="email" placeholder="your email" class="box" required>
+                    <input type="number" placeholder="your contact number" class="box" required>
+                   
+
+                    <select name="cars" id="services" class="box" onchange="selectcar()" >
+                    <option value="-1">Select a Service....</option required>
+                    <option value="buy a car">buy a car</option>
+                    <option value="car selling">car selling</option>
+                    <option value="parts repair">parts repair</option>
+                    <option value="car insurance">car insurance</option>
+                    <option value="battery replacement">battery replacement</option>
+                    <option value="oil change ">oil change</option>
+                    <option value="24/7 support">24/7 support</option>
+                </select>
+
+                <select name="cars" id="cars" class="box" style="display:none;" >
+                    <option value="-1">Select a car ....</option>
+                    <option value="Porsche Boxter 2019">Porsche Boxter 2019</option required>
+                    <option value="Porsche Panamera 2020">Porsche Panamera 2020</option>
+                    <option value="Porsche Taycan 2021">Porsche Taycan 2021</option>
+                    <option value="Porsche Cayman R 2021">Porsche Cayman R 2021</option>
+                    <option value="Porsche 911 speedster 2019">Porsche 911 speedster 2019</option>
+                    <option value="Porsche Cayenne 2021">Porsche Cayenne 2021</option>
+                    <option value="Mercedes Sls 300">Mercedes Sls 300</option>
+                    <option value="Ford fieasta">Ford fieasta</option>
+                    <option value="Audi QS5">Audi QS5</option>
+                    <option value="Kia Sportage">Kia Sportage</option>
+                    <option value="Honda Civic">Honda Civic</option>
+                    <option value="Kia Sorento">Kia Sorento</option>
+                    <option value="Chevy Trax">Chevy Trax</option>
+                   
+                </select>
+
+                    <textarea placeholder="your message" class="box" cols="30" rows="10"></textarea>
+                    <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">ALERT</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  if the Details you have Submitted are valid, 
+                  our representative will get back to you
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button"  id='myInput' class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+           submit
+          </button>
+                </form>
+        
+            </div>
+        
+        </section>
+    
+</head>
+<body>
+    
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="index.html" class="logo"> <span>Car</span>Breezy </a>
+
+    <nav class="navbar">
+        <a href="index.html" >home</a>
+        <a href="index.html">vehicles</a>
+        <a href="index.html">services</a>
+        <a href="index.html">featured</a>
+        <a href="index.html">reviews</a>
+        <a href="index.html">contact</a>
+    </nav>
+
+    <div id="login-btn">
+        <button class="btn">login</button>
+        <i class="far fa-user"></i>
+    </div>
+
+</header> 
+    
+<div class="login-form-container">
+
+    <span id="close-login-form" class="fas fa-times"></span>
+
+    <form action="">
+        <h3>user login</h3>
+        <input type="email" placeholder="email" class="box">
+        <input type="password" placeholder="password" class="box">
+        <p> forget your password <a href="#">click here</a> </p>
+        <input type="submit" value="login" class="btn">
+        <p>or login with</p>
+        <div class="buttons">
+            <a href="www.gmail.com" class="btn"> google </a>
+            <a href="www.facebook.com" class="btn"> facebook </a>
+        </div>
+        <p> don't have an account <a href="#">create one</a> </p>
+    </form>
+
+</div>
+
+
+
+<section class="footer" id="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our branches</h3>
+            <a href="https://www.google.com/maps/place/Doha/@25.2842534,51.3719068,11z/data=!3m1!4b1!4m5!3m4!1s0x3e45c534ffdce87f:0x44d9319f78cfd4b1!8m2!3d25.2854473!4d51.5310398"> <i class="fas fa-map-marker-alt"></i> Doha </a>
+            <a href="https://www.google.com/maps/place/Ar-Rayyan/@25.2525174,51.2624086,11z/data=!3m1!4b1!4m5!3m4!1s0x3e45da293b7eb755:0x7c54c80836ecce25!8m2!3d25.2862157!4d51.4204044"> <i class="fas fa-map-marker-alt"></i> Al Rayyan </a>
+            <a href="https://www.google.com/maps/place/Al+Wakrah/@25.1629083,51.5649893,13z/data=!3m1!4b1!4m5!3m4!1s0x3e45cb78c82fd52f:0x16b573f988575d05!8m2!3d25.1659314!4d51.5975524"> <i class="fas fa-map-marker-alt"></i> Al Wakra </a>
+            <a href="https://www.google.com/maps/place/Matar+Qadeem/@25.2532481,51.5575237,17z/data=!3m1!4b1!4m5!3m4!1s0x3e45cfe4e2583749:0xd996435c0f504d8e!8m2!3d25.2532951!4d51.5597499"> <i class="fas fa-map-marker-alt"></i> Matar Al Qadeem </a>
+            <a href="https://www.google.com/maps/place/Al-Kh%C4%ABsah/@25.4030751,51.411809,13z/data=!3m1!4b1!4m5!3m4!1s0x3e45ddf5e5c65e6b:0x583670594401da30!8m2!3d25.3981991!4d51.4519239"> <i class="fas fa-map-marker-alt"></i> Kheesa </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> vehicles </a>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> contact </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <h4 > <i class="fas fa-phone"></i> +974-3000-1452 </h3>
+                
+                <h4 > <i class="fas fa-phone"></i> +974-5040-6757 </h3>
+            <a href="https:\\www.gmail.com"> <i class="fas fa-envelope"></i> carbreezy@gmail.com </a>
+            <a href="https://www.google.com/maps/place/Doha/@25.2842534,51.3719068,11z/data=!3m1!4b1!4m5!3m4!1s0x3e45c534ffdce87f:0x44d9319f78cfd4b1!8m2!3d25.2854473!4d51.5310398"> <i class="fas fa-map-marker-alt"></i> doha, qatar  </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="https:\\www.facebook.com"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="https:\\www.twitter.com"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="https:\\www.instagram.com"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="https:\\www.linkedin.com"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="https:\\www.pinterest.com"> <i class="fab fa-pinterest"></i> pinterest </a>
+        </div>
+
+    </div>
+
+    <div class="credit">  Created by Ahmed baig zahid , AbdulRehman amjad , hassan </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
